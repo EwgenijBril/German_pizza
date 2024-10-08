@@ -1,14 +1,15 @@
-import { Header } from "@/components/shared/header";
-import { Button } from "@/components/ui/button";
+import { Container, Title } from "@/components/shared";
+import { TopBar } from "@/components/shared";
+
+
 
 export default function Home() {
   return (
-    <div >
-      <Header />
-      <h1>
-        Home
-        <Button variant="outline">Warenkorb</Button>
-      </h1>
-    </div>
+    <>
+      <Container className="mt-10">
+        <Title text="Alle Pizzen" size="lg" className="font-extrabold"/>
+      </Container>
+      <TopBar/>
+    </>
   );
 }

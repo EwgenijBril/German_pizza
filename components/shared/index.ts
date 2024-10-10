@@ -1,4 +1,5 @@
 export { Categories } from "./categories";
+export { CheckboxFiltersGroup } from "./checkbox_filters_group";
 export { Container } from "./container";
 export { FilterCheckbox } from "./filter_checkbox";
 export { Filters } from "./filters";
@@ -6,3 +7,4 @@ export { Header } from "./header";
 export { SortPopup } from "./sort_popup";
 export { Title } from "./title";
 export { TopBar } from "./top_bar";
+export { RangeSlider } from "./range_slider";

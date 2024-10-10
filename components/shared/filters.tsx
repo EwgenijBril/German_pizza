@@ -2,6 +2,8 @@ import React from "react";
 import { Title } from "./title";
 import { FilterCheckbox } from "./filter_checkbox";
 import { Input } from "@/components/ui";
+import { RangeSlider } from "./range_slider";
+import { CheckboxFiltersGroup } from "./checkbox_filters_group";
 
 interface Props {
 	className?: string;
@@ -22,8 +24,8 @@ export const Filters: React.FC<Props> = ({ className }) => {
 			</div>
 
 			<div className="mt-5 border-y border-y-neutral-100 py-6 pb-7">
-				<p className="font-bold mb-3">Preis von und bis:</p>
-				<div className="flex gap-3 mb-5">
+				<p className="mb-3 font-bold">Preis von und bis:</p>
+				<div className="mb-5 flex gap-3">
 					<Input
 						type="number"
 						placeholder="0"
@@ -38,7 +40,70 @@ export const Filters: React.FC<Props> = ({ className }) => {
 						max={100}
 					/>
 				</div>
+				<RangeSlider
+					min={0}
+					max={100}
+					step={1}
+					value={[0, 100]}
+				/>
 			</div>
+			<CheckboxFiltersGroup
+				title="Zutaten"
+				className="mt-5"
+				limit={6}
+				defaultItems={[
+					{
+						text: "Käse-Sauce",
+						value: "1",
+					},
+					{
+						text: "Mozzarella",
+						value: "2",
+					},
+					{
+						text: "Knoblauch",
+						value: "3",
+					},
+					{
+						text: "Essiggurken",
+						value: "4",
+					},
+					{
+						text: "Rote Zwiebel",
+						value: "5",
+					},
+					{
+						text: "Tomaten",
+						value: "6",
+					},
+				]}
+				items={[
+					{
+						text: "Käse-Sauce",
+						value: "1",
+					},
+					{
+						text: "Mozzarella",
+						value: "2",
+					},
+					{
+						text: "Knoblauch",
+						value: "3",
+					},
+					{
+						text: "Essiggurken",
+						value: "4",
+					},
+					{
+						text: "Rote Zwiebel",
+						value: "5",
+					},
+					{
+						text: "Tomaten",
+						value: "6",
+					},
+				]}
+			/>
 		</div>
 	);
 };

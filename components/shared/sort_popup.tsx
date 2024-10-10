@@ -12,13 +12,13 @@ export const SortPopup: React.FC<Props> = ({
 	return (
 		<div
 			className={cn(
-				"inline-flex items-center gap-1 bg-gray-50 px-5 h-[52px] rounded-2xl cursor-pointer",
+				"inline-flex h-[52px] cursor-pointer items-center gap-1 rounded-2xl bg-gray-50 px-5",
 				className,
 			)}
 		>
 			<ArrowUpDown size={16} />
 			<b>Filter:</b>
-			<b className="text-primary px-1">beliebte</b>
+			<b className="px-1 text-primary">beliebte</b>
 		</div>
 	);
 };

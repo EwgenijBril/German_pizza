@@ -16,7 +16,7 @@ export default function Home() {
 			<TopBar />
 
 			<Container className="mt-10 pb-14">
-				<div className="flex gap-[60px]">
+				<div className="flex gap-20">
 					<div className="w-[250px]">
 						<Filters />
 					</div>
@@ -25,17 +25,141 @@ export default function Home() {
 						<div className="flex flex-col gap-16">
 							<ProductsGroupList
 								title="Pizza"
+								categoryId={1}
 								items={[
 									{
 										id: 1,
+										name: "Dodo-Pizza",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EF02823DBA2CB09EE4F90CBC5E227A.jpg",
+										price: 14.9,
+										items: [{ price: 14.9 }],
+									},
+									{
+										id: 2,
+										name: "Mexican",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EF0286069492BA911C4D3B3376436C.jpg",
+										price: 14.9,
+										items: [{ price: 14.9 }],
+									},
+									{
+										id: 3,
 										name: "Cheeseburger-Pizza",
 										imageUrl:
 											"https://media.dodostatic.com/image/r:292x292/11EF0286349B277780CB97A8544A6AEC.jpg",
 										price: 15.5,
 										items: [{ price: 15.5 }],
 									},
+									{
+										id: 4,
+										name: "Grill Veggie",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EF028659F4831082FB3FF274D0B999.jpg",
+										price: 14.9,
+										items: [{ price: 14.9 }],
+									},
+									{
+										id: 5,
+										name: "Cheeses",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EE7D5DA07719C9B2AE7FDF4E95727B.jpg",
+										price: 13.9,
+										items: [{ price: 13.9 }],
+									},
+									{
+										id: 6,
+										name: "Tonno",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EE7D5D9F2B5C87994E3CB04FE04B89.jpg",
+										price: 13.9,
+										items: [{ price: 13.9 }],
+									},
 								]}
-								categoryId={1}
+							/>
+
+							<ProductsGroupList
+								categoryId={2}
+								title="Combo"
+								items={[
+									{
+										id: 1,
+										name: "2 Desserts",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EF2409A44145FE8CED857B24C73D7B.jpg",
+										price: 8,
+										items: [{ price: 8 }],
+									},
+									{
+										id: 2,
+										name: "4 Dodsters & Starters",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EF249D383D2BFAB954AA0706F6095A.jpg",
+										price: 22,
+										items: [{ price: 22 }],
+									},
+								]}
+							/>
+
+							<ProductsGroupList
+								categoryId={3}
+								title="Snacks"
+								items={[
+									{
+										id: 1,
+										name: "Kartoffelgratin Bacon",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EE796DDB9806EDBAD7B7F9E23A92DF.jpg",
+										price: 9.5,
+										items: [{ price: 9.5 }],
+									},
+									{
+										id: 2,
+										name: "Pasta Bolognese",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EE796DEAEBF4C999CD2CBE3E5A3D3B.jpg",
+										price: 10.9,
+										items: [{ price: 10.9 }],
+									},
+									{
+										id: 3,
+										name: "Chicken Strips",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EE796DDBD3F54BB198369F6065770B.jpg",
+										price: 15.5,
+										items: [{ price: 15.5 }],
+									},
+								]}
+							/>
+							<ProductsGroupList
+								categoryId={4}
+								title="Nachspeise"
+								items={[
+									{
+										id: 1,
+										name: "Tartufo Eis ",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EF2407B54BF49E8C1B6CCC63AFEF3C.jpg",
+										price: 4.5,
+										items: [{ price: 4.5 }],
+									},
+									{
+										id: 2,
+										name: "Ananas-Zimt-Röllchen",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EF02829F8499919E1331B852953030.jpg",
+										price: 5.9,
+										items: [{ price: 5.9 }],
+									},
+									{
+										id: 3,
+										name: "Tiroler Apfel-Donut",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EF24079FE0E9CCB3D177F1727C4522.jpg",
+										price: 5.9,
+										items: [{ price: 5.9 }],
+									},
+								]}
 							/>
 						</div>
 					</div>

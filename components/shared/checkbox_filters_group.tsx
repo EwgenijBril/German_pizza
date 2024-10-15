@@ -12,7 +12,7 @@ type Item = FilterChecboxProps;
 interface Props {
 	title: string;
 	items: Item[];
-	defaultItems?: Item[];
+	defaultItems: Item[];
 	limit?: number;
 	searchInputPlaceholder?: string;
 	onChange?: (values: string[]) => void;
@@ -23,25 +23,45 @@ interface Props {
 export const CheckboxFiltersGroup: React.FC<Props> = ({
 	title,
 	items,
-	// defaultItems,
-	// limit = 5,
+	defaultItems,
+	limit = 5,
 	searchInputPlaceholder = "Suche...",
-	// onChange,
-	// defaultValue,
+	onChange,
+	defaultValue,
 	className,
 }) => {
+	const [showAll, setShowAll] = React.useState(false);
+	const [searchValue, setSearchValue] = React.useState("");
+
+	const onChangeSearchInput = (
+		e: React.ChangeEvent<HTMLInputElement>,
+	) => {
+		setSearchValue(e.target.value);
+	};
+
+	const list = showAll
+		? items.filter(item =>
+				item.text
+					.toLowerCase()
+					.includes(searchValue.toLowerCase()),
+			)
+		: defaultItems.slice(0, limit);
+
 	return (
 		<div className={className}>
 			<p className="mb-3 font-bold">{title}</p>
-			<div className="mb-5">
-				<Input
-					placeholder={searchInputPlaceholder}
-					className="border-none bg-gray-50"
-				/>
-			</div>
+			{showAll && (
+				<div className="mb-5">
+					<Input
+						onChange={onChangeSearchInput}
+						placeholder={searchInputPlaceholder}
+						className="border-none bg-gray-50"
+					/>
+				</div>
+			)}
 
 			<div className="scrollbar flex max-h-96 flex-col gap-4 overflow-auto pr-2">
-				{items.map((item, index) => (
+				{list.map((item, index) => (
 					<FilterCheckbox
 						key={index}
 						text={item.text}
@@ -52,6 +72,22 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({
 					/>
 				))}
 			</div>
+			{items.length > limit && (
+				<div
+					className={
+						showAll
+							? "mt-4 border-t border-t-neutral-100"
+							: ""
+					}
+				>
+					<button
+						onClick={() => setShowAll(!showAll)}
+						className="mt-3 text-primary"
+					>
+						{showAll ? "Weniger" : "Weiterlesen..."}
+					</button>
+				</div>
+			)}
 		</div>
 	);
 };

@@ -102,6 +102,30 @@ export const Filters: React.FC<Props> = ({ className }) => {
 						text: "Tomaten",
 						value: "6",
 					},
+					{
+						text: "Papierroni",
+						value: "7",
+					},
+					{
+						text: "Olive",
+						value: "8",
+					},
+					{
+						text: "Meeresfrüchte",
+						value: "9",
+					},
+					{
+						text: "Ananas",
+						value: "10",
+					},
+					{
+						text: "Zwiebel",
+						value: "11",
+					},
+					{
+						text: "Wurst",
+						value: "12",
+					},
 				]}
 			/>
 		</div>

@@ -13,9 +13,8 @@ const cats = [
 	{ id: 2, name: "Combo" },
 	{ id: 3, name: "Snacks" },
 	{ id: 4, name: "Nachspeise" },
-	{ id: 5, name: "Kaffee" },
+	{ id: 5, name: "Saucen" },
 	{ id: 6, name: "Getränke" },
-	{ id: 7, name: "Desserts" },
 ];
 
 export const Categories: React.FC<Props> = ({

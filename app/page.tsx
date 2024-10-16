@@ -161,6 +161,67 @@ export default function Home() {
 									},
 								]}
 							/>
+							<ProductsGroupList
+								categoryId={5}
+								title="Saucen"
+								items={[
+									{
+										id: 1,
+										name: "Dip Sweet&Sour",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EE796DDA9AA0A3B984837C436C5957.jpg",
+										price: 1,
+										items: [{ price: 1 }],
+									},
+									{
+										id: 2,
+										name: "Dip BBQ",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EE796DD3D532C6A890DF236B86CBED.jpg",
+										price: 1.40,
+										items: [{ price: 1.40 }],
+									},
+									{
+										id: 3,
+										name: "Aioli Dip",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EE796DE5EE8445BD823C74207A22C9.jpg",
+										price: 1.40,
+										items: [{ price: 1.40 }],
+									},
+								]}
+							/>
+
+<ProductsGroupList
+								categoryId={6}
+								title="Getränke"
+								items={[
+									{
+										id: 1,
+										name: "ViO Schorle Apfel ",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EE796DD511B091BC602E6B830FB2D9.jpg",
+										price: 1,
+										items: [{ price: 1 }],
+									},
+									{
+										id: 2,
+										name: "ViO Still ",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EE796DD4CE801D8C8E0FE5F8FB5E77.jpg",
+										price: 3.30,
+										items: [{ price: 3.30 }],
+									},
+									{
+										id: 3,
+										name: "Aperol Spritz 175 ml",
+										imageUrl:
+											"https://media.dodostatic.com/image/r:292x292/11EF2406E9CA20239964879E2FD9FC03.jpg",
+										price: 4.90,
+										items: [{ price: 4.90 }],
+									},
+								]}
+							/>
 						</div>
 					</div>
 				</div>

@@ -33,6 +33,7 @@ model Category {
 
   name String @unique
   products Product[]
+  
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -45,7 +46,7 @@ model Product {
   name     String
   imageUrl String
 
-  ingredient Ingredient[]
+  ingredients Ingredient[]
   variants ProductItem[]
 
   category Category @relation(fields: [categoryId], references: [id])
